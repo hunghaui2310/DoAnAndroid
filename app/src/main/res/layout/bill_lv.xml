@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="8dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/AvatarBill"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/avtbill" />
+
+        <TextView
+            android:id="@+id/TvMabill"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="30dp"
+            android:layout_toRightOf="@id/AvatarBill"
+            android:text="SP001"
+            android:textColor="#F44336"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/TvNgay"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/TvMabill"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/AvatarBill"
+            android:text="Ngày: 25-09-2019"
+            android:textColor="#0A0A0A"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/TvTenSach"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/TvNgay"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/AvatarBill"
+            android:text="Vợ chồng a phủ"
+            android:textColor="#4CAF50"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+        <TextView
+        android:id="@+id/TvSL"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/AvatarBill"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:text="Số lượng: 10"
+        android:textColor="#FF9800"
+        android:textSize="15dp"
+        android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/TvTT"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/AvatarBill"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/TvSL"
+            android:text="Thành tiền: 100.000VĐ"
+            android:textColor="#FF9800"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+        <ImageView
+            android:id="@+id/editbook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/edit" />
+
+        <ImageView
+            android:id="@+id/deletebook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="80dp"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/delete" />
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

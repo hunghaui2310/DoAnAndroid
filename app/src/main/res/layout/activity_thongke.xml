@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".ThongkeActivity">
+
+    <RelativeLayout
+        android:id="@+id/thongke"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/back" />
+
+        <ImageView
+            android:id="@+id/imgthongke"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/back"
+            android:src="@drawable/statistical1" />
+
+        <TextView
+            android:id="@+id/TvNgay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imgthongke"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:text="Tổng tiền hôm nay:"
+            android:textColor="#FFFFFF"
+            android:textSize="30dp"
+            android:textStyle="bold"></TextView>
+
+        <TextView
+            android:id="@+id/Tvngaytien"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/TvNgay"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="80dp"
+            android:text="100000 VNĐ"
+            android:textAlignment="viewEnd"
+            android:textColor="#F44336"
+            android:textSize="30dp"
+            android:textStyle="bold"></TextView>
+
+        <TextView
+            android:id="@+id/TvThang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Tvngaytien"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:text="Tổng tiền tháng này:"
+            android:textColor="#FFFFFF"
+            android:textSize="30dp"
+            android:textStyle="bold"></TextView>
+
+        <TextView
+            android:id="@+id/TvtienThang"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/TvThang"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="80dp"
+            android:text="100000 VNĐ"
+            android:textAlignment="viewEnd"
+            android:textColor="#F44336"
+            android:textSize="30dp"
+            android:textStyle="bold"></TextView>
+
+        <TextView
+            android:id="@+id/TvNam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/TvtienThang"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:text="Tổng tiền năm này:"
+            android:textColor="#FFFFFF"
+            android:textSize="30dp"
+            android:textStyle="bold"></TextView>
+
+        <TextView
+            android:id="@+id/TvtienNam"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/TvNam"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="80dp"
+            android:text="100000 VNĐ"
+            android:textAlignment="viewEnd"
+            android:textColor="#F44336"
+            android:textSize="30dp"
+            android:textStyle="bold"></TextView>
+    </RelativeLayout>
+    </RelativeLayout>

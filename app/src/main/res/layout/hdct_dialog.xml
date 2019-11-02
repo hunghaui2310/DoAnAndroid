@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="550dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/retangle19">
+
+        <ImageView
+            android:id="@+id/billmng"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/billmanager" />
+
+        <Spinner
+            android:id="@+id/SpnmaSach"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/billmng"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rectangle3" />
+
+        <TextView
+            android:id="@+id/TvTenSach"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/SpnmaSach"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rectangle3"
+            android:gravity="center"
+            android:hint="Chi pheo"
+            android:textAlignment="center"
+            android:textColor="#000"
+            android:textSize="20dp"
+            android:textStyle="bold"></TextView>
+
+        <TextView
+            android:id="@+id/TvGia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/TvTenSach"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rectangle3"
+            android:gravity="center"
+            android:hint="100.000 VNĐ"
+            android:textAlignment="center"
+            android:textColor="#000"
+            android:textSize="20dp"
+            android:textStyle="bold"></TextView>
+
+        <EditText
+            android:id="@+id/edtSL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/TvGia"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rectangle3"
+            android:gravity="center"
+            android:hint="Số lượng"
+            android:textAlignment="center"
+            android:textColor="#000"
+            android:textSize="20dp"
+            android:textStyle="bold"></EditText>
+
+        <TextView
+            android:id="@+id/TvTT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edtSL"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rectangle3"
+            android:gravity="center"
+            android:hint="Tổng tiền"
+            android:textAlignment="center"
+            android:textColor="#000"
+            android:textSize="20dp"
+            android:textStyle="bold"></TextView>
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/TvTT"
+            android:layout_centerHorizontal="false"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/rectangle4"
+            android:text="Cancel"
+            android:textAlignment="center"
+            android:textColor="#F44336"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnConfirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/TvTT"
+            android:layout_centerHorizontal="false"
+            android:layout_marginLeft="7dp"
+            android:layout_marginTop="30dp"
+            android:layout_toRightOf="@id/btnCancel"
+            android:background="@drawable/rectangle4"
+            android:text="Confirm"
+            android:textAlignment="center"
+            android:textColor="#4CAF50"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+</RelativeLayout>

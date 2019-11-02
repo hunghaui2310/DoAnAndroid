@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bg"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="8dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/AvatarBook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="25dp"
+            android:src="@drawable/avtbook" />
+        <TextView
+            android:id="@+id/Tvtenbook"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Harry Potter"
+            android:layout_toRightOf="@id/AvatarBook"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="10dp"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:textColor="#F44336"/>
+
+        <TextView
+            android:id="@+id/TvTenSach"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Tvtenbook"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/AvatarBook"
+            android:text="Số lượng: 500"
+            android:textColor="#4CAF50"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/editbook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/edit" />
+
+        <ImageView
+            android:id="@+id/deletebook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="70dp"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/delete" />
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

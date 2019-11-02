@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".SalesActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/topsales"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/batloi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Tháng bạn nhập không tồn tại. Vui lòng nhập lại."
+            android:textColor="#FFFFFF"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:visibility="invisible" />
+    <ImageView
+        android:id="@+id/backsales"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/back"
+        android:layout_marginTop="10dp"/>
+    <ImageView
+        android:id="@+id/sales"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/salesmanager"
+        android:layout_toRightOf="@id/backsales"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"/>
+
+        <EditText
+            android:id="@+id/edtsearch"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/backsales"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="20dp"
+            android:background="#FFF"
+            android:hint="Nhập số tháng"
+            android:outlineSpotShadowColor="#FFF"
+            android:textAlignment="center"
+            android:textColorHint="#5C5757"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/btnsearch"
+            android:layout_width="62dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/backsales"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="50dp"
+            android:background="@drawable/search" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/containersales"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/edtsearch"
+            android:layout_marginTop="10dp" />
+    </RelativeLayout>
+</RelativeLayout>

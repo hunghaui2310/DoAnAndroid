@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/retangle19">
+
+        <TextView
+            android:id="@+id/addtype"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:text="Thêm thể loại"
+            android:textStyle="bold"
+            android:textSize="30dp"
+            android:textColor="#41f8f6" />
+
+        <EditText
+            android:id="@+id/edtMTL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/addtype"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rectangle3"
+            android:hint="Mã thể loại"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+        <EditText
+            android:id="@+id/edtTenTL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edtMTL"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rectangle3"
+            android:hint="Tên thể loại"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+        <EditText
+            android:id="@+id/edtVT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edtTenTL"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rectangle3"
+            android:hint="Vị trí"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/edtMota"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edtVT"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rectangle3"
+            android:hint="Mô tả"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edtMota"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="50dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="42dp"
+            android:background="@drawable/rectangle4"
+            android:text="Hủy"
+            android:textAlignment="center"
+            android:textColor="#F44336"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnConfirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edtMota"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="46dp"
+            android:layout_marginLeft="46dp"
+            android:layout_marginTop="42dp"
+            android:layout_marginEnd="50dp"
+            android:layout_toEndOf="@+id/btnCancel"
+            android:layout_toRightOf="@id/btnCancel"
+            android:background="@drawable/rectangle4"
+            android:text="Xác nhận"
+            android:textAlignment="center"
+            android:textColor="#4CAF50"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+</RelativeLayout>

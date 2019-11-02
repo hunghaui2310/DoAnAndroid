@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".AboutActivity">
+
+    <RelativeLayout
+        android:id="@+id/about"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/back" />
+
+        <ImageView
+            android:id="@+id/ongvang"
+            android:layout_width="91dp"
+            android:layout_height="185dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="100dp"
+            android:src="@drawable/ongvang" />
+
+        <TextView
+            android:id="@+id/TV1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ongvang"
+            android:fontFamily="sans-serif-medium"
+            android:text="Phần mềm quản lý bán sách"
+            android:textAlignment="center"
+            android:textColor="#FFF"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/TV2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/TV1"
+            android:layout_marginTop="30dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Nhóm 12 - Kĩ thuật máy tính 2"
+            android:textAlignment="center"
+            android:textColor="#FFF"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="210dp"
+            android:layout_height="106dp"
+            android:layout_below="@id/TV2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="150dp"
+            android:src="@drawable/img" />
+    </RelativeLayout>
+</RelativeLayout>

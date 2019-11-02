@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "473240566249",
+    "firebase_url": "https://du-an-mau-8470e.firebaseio.com",
+    "project_id": "du-an-mau-8470e",
+    "storage_bucket": "du-an-mau-8470e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:473240566249:android:f46ae5056cc430b577b378",
+        "android_client_info": {
+          "package_name": "com.huynhps09200.duanmau"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "473240566249-io89out7gclmakmdrr1vikj39h0jp91b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.huynhps09200.duanmau",
+            "certificate_hash": "4f6b101333351e77e463c434423c9b4cd895ee95"
+          }
+        },
+        {
+          "client_id": "473240566249-f2l4efm0s5vu7g1g14038qalhvom3pst.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAMt5Tlio4QpdfRY9W2dymmnaPutCJDw7A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "473240566249-f2l4efm0s5vu7g1g14038qalhvom3pst.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

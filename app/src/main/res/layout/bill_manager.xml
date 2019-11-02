@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/retangle19">
+
+        <ImageView
+            android:id="@+id/billmng"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/billmanager" />
+
+        <EditText
+            android:id="@+id/edtmahd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/billmng"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rectangle3"
+            android:hint="Mã hóa đơn"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnngaymua"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edtmahd"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rectangle20"
+            android:text="chọn ngày"
+            android:textAlignment="center"
+            android:textColor="#F44336"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnhientai"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edtmahd"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/btnngaymua"
+            android:background="@drawable/rectangle20"
+            android:text="Hiện tại"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnhientai"
+            android:layout_centerHorizontal="false"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="80dp"
+            android:background="@drawable/rectangle4"
+            android:text="Cancel"
+            android:textAlignment="center"
+            android:textColor="#F44336"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnConfirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnhientai"
+            android:layout_centerHorizontal="false"
+            android:layout_marginLeft="7dp"
+            android:layout_marginTop="80dp"
+            android:layout_toRightOf="@id/btnCancel"
+            android:background="@drawable/rectangle4"
+            android:text="Confirm"
+            android:textAlignment="center"
+            android:textColor="#4CAF50"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+</RelativeLayout>

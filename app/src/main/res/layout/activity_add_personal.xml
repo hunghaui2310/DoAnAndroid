@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".AddPersonalActivity">
+
+    <RelativeLayout
+        android:id="@+id/Add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></RelativeLayout>
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/back"
+        android:layout_marginTop="10dp"/>
+    <ImageView
+        android:id="@+id/personal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/personal1"
+        android:layout_toRightOf="@id/back"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/containerper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/back"
+        android:layout_marginTop="10dp"
+         />
+
+    <Button
+        android:id="@+id/btnAddper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/add" />
+</RelativeLayout>
