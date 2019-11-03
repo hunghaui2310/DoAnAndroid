@@ -9,17 +9,17 @@
         android:roundIcon="@drawable/avtbook"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ThongkeActivity"></activity>
-        <activity android:name=".SalesActivity" />
-        <activity android:name=".BillManagerActivity" />
-        <activity android:name=".AddTypeActivity" />
-        <activity android:name=".AddBookActivity" />
-        <activity android:name=".AddPersonalActivity" />
-        <activity android:name=".AboutActivity" />
-        <activity android:name=".MKActivity" />
-        <activity android:name=".MainActivity" />
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".Start">
+        <activity android:name="com.huynhps09200.nhom12.ThongkeActivity"></activity>
+        <activity android:name="com.huynhps09200.nhom12.SalesActivity" />
+        <activity android:name="com.huynhps09200.nhom12.BillManagerActivity" />
+        <activity android:name="com.huynhps09200.nhom12.AddTypeActivity" />
+        <activity android:name="com.huynhps09200.nhom12.AddBookActivity" />
+        <activity android:name="com.huynhps09200.nhom12.AddPersonalActivity" />
+        <activity android:name="com.huynhps09200.nhom12.AboutActivity" />
+        <activity android:name="com.huynhps09200.nhom12.MKActivity" />
+        <activity android:name="com.huynhps09200.nhom12.MainActivity" />
+        <activity android:name="com.huynhps09200.nhom12.LoginActivity" />
+        <activity android:name="com.huynhps09200.nhom12.Start">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

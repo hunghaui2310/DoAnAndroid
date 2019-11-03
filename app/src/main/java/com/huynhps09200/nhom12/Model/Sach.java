@@ -1,4 +1,4 @@
-package com.huynhps09200.duanmau.Model;
+package com.huynhps09200.nhom12.Model;
 
 public class Sach {
     public String maSach,tenTheLoai,tenSach,tacGia,NXB;

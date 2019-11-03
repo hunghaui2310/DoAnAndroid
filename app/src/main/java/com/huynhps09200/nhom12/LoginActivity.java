@@ -1,4 +1,4 @@
-package com.huynhps09200.duanmau;
+package com.huynhps09200.nhom12;
 
 import android.content.Intent;
 import android.support.annotation.NonNull;
@@ -17,8 +17,8 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.huynhps09200.duanmau.Database.NguoiDungDao;
-import com.huynhps09200.duanmau.Model.NguoiDung;
+import com.huynhps09200.nhom12.Model.NguoiDung;
+import com.huynhps09200.duanmau.R;
 
 public class LoginActivity extends AppCompatActivity {
     Button btnLogin;

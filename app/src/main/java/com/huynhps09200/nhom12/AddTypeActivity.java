@@ -1,4 +1,4 @@
-package com.huynhps09200.duanmau;
+package com.huynhps09200.nhom12;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -15,12 +15,10 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.huynhps09200.duanmau.Adapter.PersonalAdapter;
-import com.huynhps09200.duanmau.Adapter.TypeAdapter;
-import com.huynhps09200.duanmau.Database.NguoiDungDao;
-import com.huynhps09200.duanmau.Database.TheLoaiDao;
-import com.huynhps09200.duanmau.Model.NguoiDung;
-import com.huynhps09200.duanmau.Model.TheLoai;
+import com.huynhps09200.nhom12.Adapter.TypeAdapter;
+import com.huynhps09200.nhom12.Database.TheLoaiDao;
+import com.huynhps09200.nhom12.Model.TheLoai;
+import com.huynhps09200.duanmau.R;
 
 import java.util.ArrayList;
 

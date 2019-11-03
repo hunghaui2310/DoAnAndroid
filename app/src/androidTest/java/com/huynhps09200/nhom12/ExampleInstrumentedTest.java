@@ -1,4 +1,4 @@
-package com.huynhps09200.duanmau;
+package com.huynhps09200.nhom12;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

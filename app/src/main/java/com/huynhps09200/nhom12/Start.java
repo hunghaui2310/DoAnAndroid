@@ -1,4 +1,4 @@
-package com.huynhps09200.duanmau;
+package com.huynhps09200.nhom12;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
+
+import com.huynhps09200.duanmau.R;
 
 public class Start extends AppCompatActivity {
     ImageView ongvang,fpt;

@@ -1,4 +1,4 @@
-package com.huynhps09200.duanmau.Adapter;
+package com.huynhps09200.nhom12.Adapter;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -15,36 +15,35 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.huynhps09200.duanmau.AddPersonalActivity;
-import com.huynhps09200.duanmau.Database.NguoiDungDao;
-import com.huynhps09200.duanmau.Model.NguoiDung;
+import com.huynhps09200.nhom12.Database.TheLoaiDao;
+import com.huynhps09200.nhom12.Model.TheLoai;
 import com.huynhps09200.duanmau.R;
 
 import java.util.ArrayList;
 
-public class PersonalAdapter extends RecyclerView.Adapter<PersonalAdapter.ViewHolder>{
-    ArrayList<NguoiDung> list;
+public class TypeAdapter extends RecyclerView.Adapter<TypeAdapter.ViewHolder>{
+    ArrayList<TheLoai> list;
     Context context;
-    NguoiDungDao nguoiDungDao;
-    PersonalAdapter adapter;
-    public PersonalAdapter( Context context,ArrayList<NguoiDung> list) {
+    TheLoaiDao theLoaiDao;
+    TypeAdapter adapter;
+    public TypeAdapter( Context context,ArrayList<TheLoai> list) {
         this.list = list;
         this.context = context;
-        nguoiDungDao=new NguoiDungDao(context);
+        theLoaiDao =new TheLoaiDao(context);
     }
     @NonNull
     @Override
-        public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
+    public TypeAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         LayoutInflater layoutInflater=LayoutInflater.from(viewGroup.getContext());
-        View itemView=layoutInflater.inflate(R.layout.personal_lv,viewGroup,false);
+        View itemView=layoutInflater.inflate(R.layout.type_lv,viewGroup,false);
         return new ViewHolder(itemView);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull final ViewHolder viewHolder, int i) {
-        final NguoiDung nguoiDung = list.get(i);
-        viewHolder.TvFullname.setText(nguoiDung.Fullname);
-        viewHolder.TvPhone.setText(nguoiDung.Phone);
+    public void onBindViewHolder(@NonNull final TypeAdapter.ViewHolder viewHolder, int i) {
+        final TheLoai theLoai = list.get(i);
+        viewHolder.tenTL.setText(theLoai.tenTheLoai);
+        viewHolder.VT.setText("Vị trí: "+theLoai.viTri);
         viewHolder.delete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -62,7 +61,7 @@ public class PersonalAdapter extends RecyclerView.Adapter<PersonalAdapter.ViewHo
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         Toast.makeText(context, "Xóa thành công ", Toast.LENGTH_LONG).show();
-                        delete(nguoiDung);
+                        delete(theLoai);
                     }
                 });
                 AlertDialog alertDialog = builder.create();
@@ -73,19 +72,19 @@ public class PersonalAdapter extends RecyclerView.Adapter<PersonalAdapter.ViewHo
             @Override
             public void onClick(View v) {
                 final Dialog dialog=new Dialog(context);
-                dialog.setContentView(R.layout.personalupdate_dialog);
+                dialog.setContentView(R.layout.type_dialog);
                 dialog.setCancelable(false);
                 dialog.show();
-                final EditText edtUser=dialog.findViewById(R.id.edtUser);
-                final EditText edtPass=dialog.findViewById(R.id.edtPass);
-                final EditText edtFullname=dialog.findViewById(R.id.edtFullname);
-                final EditText edtPhone=dialog.findViewById(R.id.edtsdt);
+                final EditText edtMaTL=dialog.findViewById(R.id.edtMTL);
+                final EditText edtTenTL=dialog.findViewById(R.id.edtTenTL);
+                final EditText edtVT=dialog.findViewById(R.id.edtVT);
+                final EditText edtMota=dialog.findViewById(R.id.edtMota);
                 final Button btnCan=dialog.findViewById(R.id.btnCancel);
                 final Button btnCon=dialog.findViewById(R.id.btnConfirm);
-                edtUser.setText(nguoiDung.User);
-                edtPhone.setText(nguoiDung.Pass);
-                edtFullname.setText(nguoiDung.Fullname);
-                edtPhone.setText(nguoiDung.Phone);
+                edtMaTL.setText(theLoai.maTheLoai);
+                edtTenTL.setText(theLoai.tenTheLoai);
+                edtVT.setText(""+theLoai.viTri);
+                edtMota.setText(theLoai.moTa);
                 btnCan.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -95,21 +94,21 @@ public class PersonalAdapter extends RecyclerView.Adapter<PersonalAdapter.ViewHo
                 btnCon.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        String user=edtUser.getText().toString();
-                        String pass=edtPass.getText().toString();
-                        String fullname=edtFullname.getText().toString();
-                        String phone=edtPhone.getText().toString();
-                        NguoiDung nguoiDung1=new NguoiDung(user,pass,fullname,phone);
-                        if(edtUser.getText().length()!=0 && edtPass.getText().length()!=0 && edtFullname.getText().length()!=0 && edtPhone.getText().length()!=0 ){
-                                nguoiDungDao.update(nguoiDung1);
-                                dialog.dismiss();
-                            }else{
+                        String maTL=edtMaTL.getText().toString();
+                        String tenTL=edtTenTL.getText().toString();
+                        String Mota=edtMota.getText().toString();
+                        int VT= Integer.parseInt(edtVT.getText().toString());
+                        TheLoai theLoai1=new TheLoai(maTL,tenTL,Mota,VT);
+                        if(edtMaTL.getText().length()!=0 && edtTenTL.getText().length()!=0 && edtVT.getText().length()!=0 && edtMota.getText().length()!=0 ){
+                            theLoaiDao.update(theLoai1);
+                            dialog.dismiss();
+                        }else{
                             Toast.makeText(context, "Chưa điền đủ thông tin", Toast.LENGTH_SHORT).show();
                         }}
                 });
-                    }
-                });
             }
+        });
+    }
     @Override
     public int getItemCount() {
         return list.size();
@@ -117,20 +116,21 @@ public class PersonalAdapter extends RecyclerView.Adapter<PersonalAdapter.ViewHo
 
     public class ViewHolder extends RecyclerView.ViewHolder{
         ImageView edit,delete;
-        TextView TvFullname,TvPhone;
+        TextView VT,tenTL;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            edit=itemView.findViewById(R.id.edit);
-            delete=itemView.findViewById(R.id.delete);
-            TvFullname=itemView.findViewById(R.id.Tvten);
-            TvPhone=itemView.findViewById(R.id.Tvsdt);
+            tenTL=itemView.findViewById(R.id.TvTenTL);
+            edit=itemView.findViewById(R.id.editype);
+            delete=itemView.findViewById(R.id.deletetype);
+            VT=itemView.findViewById(R.id.TvVT);
         }
     }
-    public void delete(NguoiDung nguoiDung){
-        nguoiDungDao.delete(nguoiDung);
+    public void delete(TheLoai theLoai){
+        theLoaiDao.delete(theLoai);
         list.clear();
 
     }
 
 }
+
 

@@ -1,4 +1,4 @@
-package com.huynhps09200.duanmau;
+package com.huynhps09200.nhom12;
 
 import android.content.Intent;
 import android.support.annotation.NonNull;
@@ -12,15 +12,14 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.huynhps09200.duanmau.Database.NguoiDungDao;
-import com.huynhps09200.duanmau.Model.NguoiDung;
+import com.huynhps09200.nhom12.Database.NguoiDungDao;
+import com.huynhps09200.nhom12.Model.NguoiDung;
+import com.huynhps09200.duanmau.R;
 
 public class MKActivity extends AppCompatActivity {
     Animation translatex,translatey;

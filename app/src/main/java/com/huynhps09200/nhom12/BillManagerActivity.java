@@ -1,4 +1,4 @@
-package com.huynhps09200.duanmau;
+package com.huynhps09200.nhom12;
 
 import android.app.DatePickerDialog;
 import android.app.Dialog;
@@ -27,10 +27,11 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.huynhps09200.duanmau.Adapter.HoaDonAdapter;
-import com.huynhps09200.duanmau.Database.HoaDonChiTietDao;
-import com.huynhps09200.duanmau.Model.HoaDonChiTiet;
-import com.huynhps09200.duanmau.Model.Sach;
+import com.huynhps09200.nhom12.Adapter.HoaDonAdapter;
+import com.huynhps09200.nhom12.Database.HoaDonChiTietDao;
+import com.huynhps09200.nhom12.Model.HoaDonChiTiet;
+import com.huynhps09200.nhom12.Model.Sach;
+import com.huynhps09200.duanmau.R;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;

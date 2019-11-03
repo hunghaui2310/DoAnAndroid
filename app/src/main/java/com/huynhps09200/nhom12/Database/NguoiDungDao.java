@@ -1,30 +1,21 @@
-package com.huynhps09200.duanmau.Database;
+package com.huynhps09200.nhom12.Database;
 
-import android.content.ContentValues;
 import android.content.Context;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.support.annotation.NonNull;
 import android.util.Log;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.huynhps09200.duanmau.AddPersonalActivity;
-import com.huynhps09200.duanmau.MainActivity;
-import com.huynhps09200.duanmau.Model.NguoiDung;
-import com.huynhps09200.duanmau.Model.Sach;
-
-import org.w3c.dom.Comment;
+import com.huynhps09200.nhom12.AddPersonalActivity;
+import com.huynhps09200.nhom12.Model.NguoiDung;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class NguoiDungDao {
     private DatabaseReference mData;

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg"
-    tools:context=".ThongkeActivity">
+    tools:context="com.huynhps09200.nhom12.ThongkeActivity">
 
     <RelativeLayout
         android:id="@+id/thongke"

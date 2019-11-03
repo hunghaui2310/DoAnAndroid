@@ -1,42 +1,32 @@
-package com.huynhps09200.duanmau;
+package com.huynhps09200.nhom12;
 
 import android.app.AlertDialog;
-import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.Path;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.huynhps09200.duanmau.Adapter.BookAdapter;
-import com.huynhps09200.duanmau.Adapter.HoaDonAdapter;
-import com.huynhps09200.duanmau.Adapter.SalesAdapter;
-import com.huynhps09200.duanmau.Database.HoaDonChiTietDao;
-import com.huynhps09200.duanmau.Database.SachDao;
-import com.huynhps09200.duanmau.Model.HoaDonChiTiet;
-import com.huynhps09200.duanmau.Model.Sach;
-import com.huynhps09200.duanmau.Model.TheLoai;
+import com.huynhps09200.nhom12.Adapter.SalesAdapter;
+import com.huynhps09200.nhom12.Database.HoaDonChiTietDao;
+import com.huynhps09200.nhom12.Model.HoaDonChiTiet;
+import com.huynhps09200.duanmau.R;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.List;
 
 public class SalesActivity extends AppCompatActivity {
     EditText edtsearch;

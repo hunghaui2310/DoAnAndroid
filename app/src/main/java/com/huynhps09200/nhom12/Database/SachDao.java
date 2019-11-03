@@ -1,4 +1,4 @@
-package com.huynhps09200.duanmau.Database;
+package com.huynhps09200.nhom12.Database;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -12,31 +12,28 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.huynhps09200.duanmau.AddPersonalActivity;
-import com.huynhps09200.duanmau.AddTypeActivity;
-import com.huynhps09200.duanmau.Model.NguoiDung;
-import com.huynhps09200.duanmau.Model.TheLoai;
+import com.huynhps09200.nhom12.AddBookActivity;
+import com.huynhps09200.nhom12.Model.Sach;
 
 import java.util.ArrayList;
-import java.util.List;
 
-public class TheLoaiDao {
+public class SachDao {
     private DatabaseReference mData;
     Context context;
-    String TheLoaiID;
+    String SachID;
 
     //
-    public TheLoaiDao(Context context) {
+    public SachDao(Context context) {
 //
-        this.mData = FirebaseDatabase.getInstance().getReference("TheLoai");
+        this.mData = FirebaseDatabase.getInstance().getReference("Sach");
         this.context = context;
 
     }
 
-    public void insert(TheLoai theLoai) {
+    public void insert(Sach sach) {
 //
-        TheLoaiID = mData.push().getKey();
-        mData.child(TheLoaiID).setValue(theLoai).addOnSuccessListener(new OnSuccessListener<Void>() {
+        SachID=mData.push().getKey();
+        mData.child(SachID).setValue(sach).addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
             public void onSuccess(Void aVoid) {
                 Toast.makeText(context, "Thêm thành công", Toast.LENGTH_SHORT).show();
@@ -50,19 +47,19 @@ public class TheLoaiDao {
     }
 
 
-    public void delete(final TheLoai theLoai) {
+    public void delete(final Sach sach) {
         mData.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
                 for (DataSnapshot data : dataSnapshot.getChildren()) {
 
-                    if (data.child("maTheLoai").getValue(String.class).equalsIgnoreCase(theLoai.maTheLoai)) {
-                        TheLoaiID = data.getKey();
-                        Log.d("getKey", "onCreate: key :" + TheLoaiID);
+                    if (data.child("maSach").getValue(String.class).equalsIgnoreCase(sach.maSach)) {
+                        SachID = data.getKey();
+                        Log.d("getKey", "onCreate: key :" + SachID);
 
 
-                        mData.child(TheLoaiID).setValue(null)
+                        mData.child(SachID).setValue(null)
                                 .addOnSuccessListener(new OnSuccessListener<Void>() {
                                     @Override
                                     public void onSuccess(Void aVoid) {
@@ -90,8 +87,8 @@ public class TheLoaiDao {
         });
     }
 
-    public ArrayList<TheLoai> getAll() {
-        final ArrayList<TheLoai> list = new ArrayList<>();
+    public ArrayList<Sach> getAll() {
+        final ArrayList<Sach> list = new ArrayList<>();
 //
         ValueEventListener listener = new ValueEventListener() {
             @Override
@@ -99,10 +96,10 @@ public class TheLoaiDao {
                 // Get Sach object and use the values to update the UI
                 list.clear();
                 for (DataSnapshot data : dataSnapshot.getChildren()) {
-                    TheLoai theLoai = data.getValue(TheLoai.class);
-                    list.add(theLoai);
+                    Sach sach = data.getValue(Sach.class);
+                    list.add(sach);
                 }
-                ((AddTypeActivity) context).Load();
+                ((AddBookActivity) context).Load();
             }
 
             @Override
@@ -114,45 +111,41 @@ public class TheLoaiDao {
         return list;
     }
 
-    public void update(final TheLoai theLoai) {
+    public void update(final Sach sach) {
         mData.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
                 for (DataSnapshot data : dataSnapshot.getChildren()) {
 
-                    if (data.child("maTheLoai").getValue(String.class).equalsIgnoreCase(theLoai.maTheLoai)) {
+                    if (data.child("maSach").getValue(String.class).equalsIgnoreCase(sach.maSach)) {
 
-                            TheLoaiID = data.getKey();
-                            Log.d("getKey", "onCreate: key :" + TheLoaiID);
-
-
-                            mData.child(TheLoaiID).setValue(theLoai)
-                                    .addOnSuccessListener(new OnSuccessListener<Void>() {
-                                        @Override
-                                        public void onSuccess(Void aVoid) {
-                                            Toast.makeText(context, "update thành công", Toast.LENGTH_SHORT).show();
+                        SachID = data.getKey();
+                        Log.d("getKey", "onCreate: key :" + SachID);
 
 
-                                        }
-                                    })
-                                    .addOnFailureListener(new OnFailureListener() {
-                                        @Override
-                                        public void onFailure(@NonNull Exception e) {
-                                            Toast.makeText(context, "update thất bại", Toast.LENGTH_SHORT).show();
-                                        }
-                                    });
-                        }
+                        mData.child(SachID).setValue(sach)
+                                .addOnSuccessListener(new OnSuccessListener<Void>() {
+                                    @Override
+                                    public void onSuccess(Void aVoid) {
+                                        Toast.makeText(context, "update thành công", Toast.LENGTH_SHORT).show();
+
+
+                                    }
+                                })
+                                .addOnFailureListener(new OnFailureListener() {
+                                    @Override
+                                    public void onFailure(@NonNull Exception e) {
+                                        Toast.makeText(context, "update thất bại", Toast.LENGTH_SHORT).show();
+                                    }
+                                });
                     }
                 }
+            }
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
 
             }
         });
-    }
-    public List<String> getTL(){
-
-        return null;
     }
 }

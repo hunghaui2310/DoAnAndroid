@@ -1,4 +1,4 @@
-package com.huynhps09200.duanmau;
+package com.huynhps09200.nhom12;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -24,14 +24,11 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.huynhps09200.duanmau.Adapter.BookAdapter;
-import com.huynhps09200.duanmau.Adapter.PersonalAdapter;
-import com.huynhps09200.duanmau.Database.NguoiDungDao;
-import com.huynhps09200.duanmau.Database.SachDao;
-import com.huynhps09200.duanmau.Database.TheLoaiDao;
-import com.huynhps09200.duanmau.Model.NguoiDung;
-import com.huynhps09200.duanmau.Model.Sach;
-import com.huynhps09200.duanmau.Model.TheLoai;
+import com.huynhps09200.nhom12.Adapter.BookAdapter;
+import com.huynhps09200.nhom12.Database.SachDao;
+import com.huynhps09200.nhom12.Model.Sach;
+import com.huynhps09200.nhom12.Model.TheLoai;
+import com.huynhps09200.duanmau.R;
 
 import java.util.ArrayList;
 import java.util.List;

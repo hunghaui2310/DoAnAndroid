@@ -1,4 +1,4 @@
-package com.huynhps09200.duanmau;
+package com.huynhps09200.nhom12;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -10,13 +10,10 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.PopupMenu;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
+import com.huynhps09200.duanmau.R;
 
 public class MainActivity extends AppCompatActivity {
     Button btnPer,btnSales,btnBill,btnStatis,btnBook,btnType,btnMenu;

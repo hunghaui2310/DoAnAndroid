@@ -1,10 +1,8 @@
-package com.huynhps09200.duanmau;
+package com.huynhps09200.nhom12;
 
-import android.graphics.drawable.Animatable;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -16,7 +14,8 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.huynhps09200.duanmau.Model.HoaDonChiTiet;
+import com.huynhps09200.nhom12.Model.HoaDonChiTiet;
+import com.huynhps09200.duanmau.R;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
