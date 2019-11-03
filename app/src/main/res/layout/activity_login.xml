@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg"
-    tools:context="com.huynhps09200.nhom12.LoginActivity">
+    tools:context="com.doan.nhom12.LoginActivity">
 
     <ImageView
         android:id="@+id/imageView7"
